@@ -2,3 +2,13 @@
 <div class="contrainer">
     welcome {{name}} you can manage your todos <a routerLink="/todos">here</a>
 </div>
+
+<div class="contrainer">
+    Click here to get a customized welcome Message
+    <button (click)="getWelcomeMessageWithParameter()"class=".btn .btn-success">Get Welcome Message</button>
+</div>
+
+<div class="contrainer" *ngIf="welcomeMessageFromService">
+    <h2> Your customized welcome message</h2>
+    {{welcomeMessageFromService}}
+</div>
